@@ -3,13 +3,13 @@
     src: url(../font/GulfsDisplay-Normal.ttf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900&family=Open+Sans:ital,wght@0,300..800&display=swap');
 
 /* Estilos Generales */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Usa el modelo de cajas */
 }
 
 body, html {
@@ -37,37 +37,29 @@ body, html {
 .sesion-inicio::after {
     content: '';
     position: absolute;
-    top: 50%; /* Posiciona la línea al 50% de la altura, justo donde se cortan los colores */
+    top: 50%;
     left: 0;
     width: 100%;
-    height: 2px; /* El grosor de la línea */
-    background-color: black; /* Color de la línea */
+    height: 2px;
+    background-color: black;
 }
-
-
 
 /* Navegación */
 nav {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
-    padding: 10px 10px;
+    padding: 10px;
     background: #FFC0CB;
 }
 
 nav a {
+    font-family: "Anybody", sans-serif;
     color: #000;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
-}
-
-/* Contenido principal */
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
+    letter-spacing: 5px; /* Ajusta el espaciado entre letras */
 }
 
 /* Título principal */
@@ -78,47 +70,56 @@ nav a {
     color: #0000FF;
     margin-bottom: -50px;
     line-height: 1.1;
-    position: relative;
-    z-index: 10;
 }
 
 /* Contenedor de imágenes */
 .image-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 85vh;
-    padding-top: 122px;
-    z-index: 5;
+    padding-top: 87px;
 }
 
 /* Imágenes laterales */
 .side-image {
-    width: 150px;
-    height: 200px;
+    width: 30%; /* Ancho relativo */
+    height: auto;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 40px;
     z-index: 5;
+    outline: 1px solid black;
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan demasiado */
+    max-width: 450px; /* Establece un ancho máximo */
 }
 
+/* Imagen de la izquierda */
 .side-image.left {
-    margin-right: 20px;
+    margin-right: 5%;
+    width: 22%; /* Ancho relativo */
+    max-width: 25vw; /* Establece un ancho máximo más pequeño */
 }
 
+/* Imagen de la derecha */
 .side-image.right {
-    margin-left: 20px;
+    width: 15%; /* Ancho relativo */
+    margin-left: 5%;
+    max-width: 20vw; /* Establece un ancho máximo más pequeño */
 }
 
 /* Imagen central */
 .center-image {
-    width: 300px;
-    height: 454px;
+    width: 30%;
+    height: auto;
     object-fit: cover;
-    border-radius: 46%;
+    border-radius: 41%;
     z-index: 5;
     outline: 1px solid black;
+    margin: 0 auto;
+    max-width: 35vw; /* Establece un ancho máximo para la imagen central */
 }
+
 
 /* Elementos decorativos */
 .star {
@@ -152,26 +153,32 @@ nav a {
         margin-bottom: -30px;
     }
     
-    .side-image {
-        width: 100px;
-        height: 150px;
-    }
-    
-    .center-image {
-        width: 200px;
-        height: 300px;
-    }
-    
-    .image-container {
-        padding-top: 30px;
-    }
-
+    /* Las imágenes laterales desaparecen en pantallas pequeñas */
     .side-image {
         display: none;
     }
 
     .center-image {
-        width: 70%; /* Ajusta el tamaño de la imagen para pantallas medianas */
+        width: 70%; /* Ajusta el tamaño de la imagen central en pantallas pequeñas */
+        margin: 0 auto;
     }
     
+    .image-container {
+        flex-direction: column; /* Cambia a layout vertical en pantallas pequeñas */
+        padding-top: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sesion-inicio h1 {
+        font-size: 2.5em;
+    }
+
+    .side-image {
+        width: 30%; /* Ajusta el tamaño de las imágenes laterales */
+    }
+
+    .center-image {
+        width: 40%; /* Ajusta la imagen central para pantallas medianas */
+    }
 }
