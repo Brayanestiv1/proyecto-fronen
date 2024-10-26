@@ -27,8 +27,8 @@ body, html {
 .sesion-inicio {
     position: relative;
     width: 100%;
-    height: 120vh;
-    background: linear-gradient(to bottom, #FFC0CB 50%, #FFFF00 50%);
+    height: 190vh;
+    background: linear-gradient(to bottom, #FFC0CB 82vh, #FFFF00 82vh);
     padding: 20px;
     box-sizing: border-box;
 }
@@ -37,8 +37,8 @@ body, html {
 .sesion-inicio::after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: 43%;
+    left: 78px;
     width: 100%;
     height: 2px;
     background-color: black;
@@ -47,29 +47,54 @@ body, html {
 /* Navegación */
 nav {
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     padding: 10px;
+    padding-right: 99px;
     background: #FFC0CB;
+    gap: 110px;
 }
 
 nav a {
+    display: flex;
+    align-items: center; /* Alinea el texto y la imagen verticalmente */
     font-family: "Anybody", sans-serif;
     color: #000;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
-    letter-spacing: 5px; /* Ajusta el espaciado entre letras */
+    font-size: 16px;
+    font-weight: 700; /* Fijamos un peso base */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-shadow: 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000; /* Simula mayor grosor */
+    transform: scaleX(1.5); /* Cambia 1.2 por el factor de alargamiento deseado */
 }
+
+
+nav img {
+    margin-right: 10px; /* Espaciado entre la imagen y el texto */
+    width: 20px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Agrega un efecto de subrayado al pasar el ratón */
+    text-decoration: none;
+}
+
 
 /* Título principal */
 .sesion-inicio h1 {
     font-family: "Gulfs Display", sans-serif;
+    display: flex;
     text-align: center;
-    font-size: 3em;
-    color: #0000FF;
-    margin-bottom: -50px;
-    line-height: 1.1;
+    justify-content: center;
+    font-size: 6em;
+    color: #065bf9;
+    line-height: 1;
+    letter-spacing: 5px; /* Espaciado entre letras */
+    font-weight: 500; /* Fijamos un peso base */
+    margin-top: 165px;
 }
 
 /* Contenedor de imágenes */
@@ -78,7 +103,7 @@ nav a {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 85vh;
+    height: 54vh;
     padding-top: 87px;
 }
 
@@ -99,6 +124,7 @@ nav a {
     margin-right: 5%;
     width: 22%; /* Ancho relativo */
     max-width: 25vw; /* Establece un ancho máximo más pequeño */
+    margin-left: -95px; /* Ajuste negativo para mover a la izquierda */
 }
 
 /* Imagen de la derecha */
@@ -146,6 +172,60 @@ nav a {
     font-weight: bold;
 }
 
+
+
+/* seccion galeria */
+
+.seccion-galeria {
+position: relative;
+overflow: hidden;
+width: 100%;
+outline: 1px solid green;
+height: 60.19vh; /* Ajustado a vh */
+z-index: 0;
+}
+
+.caja1 {
+position: absolute;
+outline: 1px solid black;
+background-color: #ffb4cc;
+height: 43.52vh; /* Ajustado a vh */
+width: 100%;
+z-index: 1;
+}
+
+.caja2 {
+background-color: #fcf46c;
+height: 69.03vh; /* Ajustado a vh */
+width: 100%;
+position: absolute;
+z-index: 0;
+}
+
+
+/* seccion precios */
+
+.seccion-precios {
+position: relative;
+overflow: hidden;
+width: 100%;
+outline: 1px solid green;
+height: 60.19vh; /* Ajustado a vh */
+z-index: 0;
+}
+
+
+/* seccion-contectos */
+
+.seccion-contectos {
+position: relative;
+overflow: hidden;
+width: 100%;
+outline: 1px solid green;
+height: 60.19vh; /* Ajustado a vh */
+z-index: 0;
+}
+
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
     .sesion-inicio h1 {
@@ -169,16 +249,3 @@ nav a {
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .sesion-inicio h1 {
-        font-size: 2.5em;
-    }
-
-    .side-image {
-        width: 30%; /* Ajusta el tamaño de las imágenes laterales */
-    }
-
-    .center-image {
-        width: 40%; /* Ajusta la imagen central para pantallas medianas */
-    }
-}
