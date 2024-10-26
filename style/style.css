@@ -5,7 +5,35 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900&family=Open+Sans:ital,wght@0,300..800&display=swap');
 
-/* Estilos Generales */
+
+ .sesion-inicio h1 {
+        font-size: 2em;
+        margin-bottom: -30px;
+    }
+    
+    /* Las imágenes laterales desaparecen en pantallas pequeñas */
+    .side-image {
+        display: none;
+    }
+
+    .center-image {
+        width: 70%; /* Ajusta el tamaño de la imagen central en pantallas pequeñas */
+        margin: 0 auto;
+    }
+    
+    .image-container {
+        flex-direction: column; /* Cambia a layout vertical en pantallas pequeñas */
+        padding-top: 20px;
+    }
+
+
+
+
+
+    
+/* Media Queries para responsividad */
+@media (min-width: 768px) {
+   /* Estilos Generales */
 * {
     margin: 0;
     padding: 0;
@@ -226,26 +254,5 @@ height: 60.19vh; /* Ajustado a vh */
 z-index: 0;
 }
 
-/* Media Queries para responsividad */
-@media (max-width: 768px) {
-    .sesion-inicio h1 {
-        font-size: 2em;
-        margin-bottom: -30px;
-    }
-    
-    /* Las imágenes laterales desaparecen en pantallas pequeñas */
-    .side-image {
-        display: none;
-    }
-
-    .center-image {
-        width: 70%; /* Ajusta el tamaño de la imagen central en pantallas pequeñas */
-        margin: 0 auto;
-    }
-    
-    .image-container {
-        flex-direction: column; /* Cambia a layout vertical en pantallas pequeñas */
-        padding-top: 20px;
-    }
 }
 
