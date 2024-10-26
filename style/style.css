@@ -1,174 +1,177 @@
-@font-face{
+@font-face {
     font-family: "Gulfs Display";
     src: url(../font/GulfsDisplay-Normal.ttf);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-*{
-   
-    box-sizing: border-box;
+/* Estilos Generales */
+* {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
 }
 
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
 
+.global {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
+/* Sección Inicio */
 .sesion-inicio {
     position: relative;
-    outline: 1px solid red;
     width: 100%;
-    height: 45.03vh; /* Ajustado a vh */
-    background-color: #ffb4cc;
+    height: 120vh;
+    background: linear-gradient(to bottom, #FFC0CB 50%, #FFFF00 50%);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-
-.div1 {
-    display: none;
-}
-
-
-.div2 {
+/* Pseudo-elemento para la línea */
+.sesion-inicio::after {
+    content: '';
     position: absolute;
-    left: 37vw;
-    top: 20vh;
-    z-index: 1;
-    
-    
-    
-}
-.div2 img {
-    border: 1px solid #fcf46c;
-    width: 200px;
-    height: 300px;
-    border-radius: 120px;
-    object-fit: cover;
-    
+    top: 50%; /* Posiciona la línea al 50% de la altura, justo donde se cortan los colores */
+    left: 0;
+    width: 100%;
+    height: 2px; /* El grosor de la línea */
+    background-color: black; /* Color de la línea */
 }
 
-.estrella {
-    margin-left: 17px;
-    margin-top: 348px;
-    width: 38px;
-    height: 38px;
-    position: absolute;
-    z-index: 3;
-    
+
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px;
+    background: #FFC0CB;
 }
 
-.estrella1 {
-    margin-left: 344px;
-    margin-top: 385px;
-    width: 23px;
-    height: 24px;
-    position: absolute;
+nav a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* Contenido principal */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Título principal */
+.sesion-inicio h1 {
+    font-family: "Gulfs Display", sans-serif;
+    text-align: center;
+    font-size: 3em;
+    color: #0000FF;
+    margin-bottom: -50px;
+    line-height: 1.1;
+    position: relative;
+    z-index: 10;
+}
+
+/* Contenedor de imágenes */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+    padding-top: 122px;
     z-index: 5;
-    
 }
 
-.estrella2 {
-    margin-left: 33px;
-    margin-top: 231px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    z-index: 6;
-    
+/* Imágenes laterales */
+.side-image {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 5;
 }
+
+.side-image.left {
+    margin-right: 20px;
+}
+
+.side-image.right {
+    margin-left: 20px;
+}
+
+/* Imagen central */
+.center-image {
+    width: 300px;
+    height: 454px;
+    object-fit: cover;
+    border-radius: 46%;
+    z-index: 5;
+    outline: 1px solid black;
+}
+
+/* Elementos decorativos */
+.star {
+    position: absolute;
+    width: 50px;
+    height: auto;
+}
+
+.star1 { top: 10%; left: 5%; }
+.star2 { top: 20%; right: 10%; }
+.star3 { bottom: 15%; left: 15%; }
 
 .logo {
-    margin-left: 25px;
-    margin-top: 598px;
-    width: 100px;
-    height: 100px;
     position: absolute;
-    z-index: 7;
-}
-        
-
-
-.linea {
-    margin-left: 310px;
-    margin-top: 321px;
-    width: 67px;
-    height: 30px;
-    position: absolute;
-    z-index: 8;
-        
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
-/* seccion nosotros */
-
-.seccion-nosotros {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    background-color: #fcf46c;
-    outline: 1px solid blue;
-    height: 95.37vh; /* Ajustado a vh */
-    z-index: 0;
-}
-
-.guia {
-    outline: 1px solid red;
-    height: 5vh;
-    padding-top: 25vh;
-}
-
-/* seccion galeria */
-
-.seccion-galeria {
-position: relative;
-overflow: hidden;
-width: 100%;
-outline: 1px solid green;
-height: 60.19vh; /* Ajustado a vh */
-z-index: 0;
-}
-
-
-
-
-/* seccion precios */
-
-.seccion-precios {
-position: relative;
-overflow: hidden;
-width: 100%;
-outline: 1px solid green;
-height: 60.19vh; /* Ajustado a vh */
-z-index: 0;
-}
-
-
-/* seccion-contectos */
-
-.seccion-contectos {
-position: relative;
-overflow: hidden;
-width: 100%;
-outline: 1px solid green;
-height: 60.19vh; /* Ajustado a vh */
-z-index: 0;
-}
-
-
-
-/* menos de 768px */
+/* Media Queries para responsividad */
 @media (max-width: 768px) {
-    .div1 {
-        display: flex;
-        justify-content: flex-end;
+    .sesion-inicio h1 {
+        font-size: 2em;
+        margin-bottom: -30px;
+    }
+    
+    .side-image {
+        width: 100px;
+        height: 150px;
+    }
+    
+    .center-image {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .image-container {
+        padding-top: 30px;
     }
 
-    .div img {
-        width: 76.8px;
-        height: 76.8px;
+    .side-image {
+        display: none;
     }
 
+    .center-image {
+        width: 70%; /* Ajusta el tamaño de la imagen para pantallas medianas */
+    }
+    
 }
-
-
-
-
