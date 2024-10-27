@@ -6,24 +6,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900&family=Open+Sans:ital,wght@0,300..800&display=swap');
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Anybody", sans-serif
+}
+
 h1 {
     font-family: "Gulfs Display", sans-serif;
-    }
-    
-    /* Las imágenes laterales desaparecen en pantallas pequeñas */
-    .side-image {
-        display: none;
-    }
+    line-height: 1;
+}
 
-    .center-image {
-        width: 70%; /* Ajusta el tamaño de la imagen central en pantallas pequeñas */
-        margin: 0 auto;
-    }
+p {
+    font-family: "Anybody", sans-serif
+}
+
+.mobile-menu,
+.desktop-menu {
+    display: none;
+}
     
-    .image-container {
-        flex-direction: column; /* Cambia a layout vertical en pantallas pequeñas */
-        padding-top: 20px;
-    }
+/* Las imágenes laterales desaparecen en pantallas pequeñas */
+.side-image {
+    display: none;
+}
+
+.center-image {
+    width: 70%; /* Ajusta el tamaño de la imagen central en pantallas pequeñas */
+    margin: 0 auto;
+}
+    
+.image-container {
+    flex-direction: column; /* Cambia a layout vertical en pantallas pequeñas */
+    padding-top: 20px;
+}
 
 
 
