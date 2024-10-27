@@ -6,9 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900&family=Open+Sans:ital,wght@0,300..800&display=swap');
 
 
- .sesion-inicio h1 {
-        font-size: 2em;
-        margin-bottom: -30px;
+h1 {
+    font-family: "Gulfs Display", sans-serif;
     }
     
     /* Las imágenes laterales desaparecen en pantallas pequeñas */
